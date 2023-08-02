@@ -1,5 +1,5 @@
 {% set name = "jupyterlab_rise" %}
-{% set version = "0.2.1" %}
+{% set version = "0.40.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0aac9b57facfdb46988c17280bd93f2451c699bff42fccee730d242b80e4acfa
+  sha256: f3c401ad1abcfd7a3189d8fed997b059a59423e9fd8bec763b392ded4f5c05e2
 
 build:
   noarch: python
