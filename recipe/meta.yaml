@@ -12,19 +12,19 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - hatchling >=1.4.0
-    - jupyterlab >=3.4.7,<4.0.0
+    - jupyterlab >=4.0.0,<5.0.0
     - hatch-nodejs-version
     - hatch-jupyter-builder
   run:
-    - python >=3.7
-    - jupyterlab >=3.0.0,<4.0.0
+    - python >=3.8
+    - jupyterlab >=4.0.0,<5.0.0
 
 test:
   imports:
@@ -33,7 +33,7 @@ test:
     - pip
   commands:
     - pip check
-    - python -m jupyterlab.browser_check --no-chrome-test
+    - python -m jupyterlab.browser_check --no-browser-test
 
 about:
   home: https://github.com/jupyterlab-contrib/rise
